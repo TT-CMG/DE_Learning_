@@ -1,2 +1,36 @@
-abc
-xyz
+1/ Imagine that you are hired to enable data analytics; where would you start? 
+How would you go about gathering requirements? 
+Hint: Think backward from what the business may need.
+
+Ans: To analytics effectively we should start from the needs of business
+1/ Understand what business needs:
++ Identify the stakeholders
++ What is the goals of business
+  - What should be improved?
+  - What is the problem they trying to solve?
+
++ Mapping with the specific task:
+  - Focast sales
+  - Decrease customer churn
+2/ Assess the current state
++ Data inventory: where they are currently available (API, databases,...)
++ The infrastructure: Identify the analytics tools, data pipelines, and infrastructure already in use.
+3/ Gather requirements
++ Collaborate with stakeholders:
+  - Conduct workshops, interviews, and surveys to gather detailed requirements.
+  - Create personas for different users (e.g., data scientists, analysts, managers).
++ Ask right question:
+  - Descriptive analytics: what historical trends are needed?
+  - Diagnostic analytics: what root cause need to be uncovered?
+  - Prdictive analytics: what future outcomes need to be focasted?
+  - Prescriptive analytics: what optimization or recomendation they need
+4/ Design solution
++ Data strategy: how to collect, storage, processing and analytics
++ infrastructure design: Choose tools and platform (cloud, local, hybrid)
++ pipelines design: ETL workflow, 
++ analytics tools:Select tools based on user needs 
+(BI tools like Tableau/Power BI, Python for advanced analytics, etc.).
+5/ Enablement and rollout:
++ Training: train users to make data-driven decisions
++ Doc: Provide clear document for tools, processes and data modals
++ Support: Set up a support structure for ongoing questions or issues. 
