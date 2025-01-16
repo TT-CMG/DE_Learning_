@@ -2,6 +2,10 @@
 # Variable: A storage location identified by its name, containing some value.
 # Question: Assign a value of 10 to variable a and 20 to variable b
 # Question: Store the result of a + b in a variable c and print it. What is the result of a + b?
+a = 10
+b = 20
+c = a + b
+print(c)
 
 s = '  Some string '
 # Question: How do you remove the empty spaces in front of and behind the string s?
@@ -13,12 +17,15 @@ l = [1, 2, 3, 4]
 
 # Question: How do you access the elements in index 0 and 3? Print the results.
 ## NOTE: lists retain the order of elements in it but dictionary doesn't
+print(l[0], l[3])
 
 ## Dictionary: A collection of key-value pairs, where each key is mapped to a value using a hash function. Provides fast data retrieval based on keys.
 d = {'a': 1, 'b': 2}
 
-# Question: How do you access the values associated with keys 'a' and 'b'?
-## NOTE: The dictionary cannot have duplicate keys
+# # Question: How do you access the values associated with keys 'a' and 'b'?
+# ## NOTE: The dictionary cannot have duplicate keys
+print(d['a'])
+print(d['b'])
 
 ## Set: A collection of unique elements that do not allow duplicates
 my_set = set()
@@ -27,23 +34,27 @@ my_set.add(10)
 my_set.add(10)
 
 # Question: What will be the output of my_set?
+print(my_set) # just {10} because Set do not allow duplicates
 
 ## Tuple: A collection of immutable (non-changeable) elements, tuples retain their order once created.
 my_tuple = (1, 'hello', 3.14)
 
 # Question: What is the value of my_tuple?
-
+print(my_tuple)
 # Accessing elements by index
-
+print(my_tuple[1])
 # Question: How do you access the elements in index 0 and 1 of my_tuple?
 
 # Counting occurrences of an element
 count_tuple = (1, 2, 3, 1, 1, 2)
 
 # Question: How many times does the number 1 appear in count_tuple?
-
+tmp = count_tuple.count(1)
+print("So lan xuat hien ky tu 1: ", tmp)
 # Finding the index of an element
 # Question: What is the index of the first occurrence of the number 2 in count_tuple?
+tmp1 = count_tuple.index(2)
+print(tmp1)
 
 # Loop allows a specific chunk of code to be repeated a certain number of times
 # Example: We can use a loop to print numbers 0 through 10
@@ -68,9 +79,12 @@ def gt_three(input_list):
 
 list_1 = [1, 2, 3, 4, 5, 6]
 # Question: How do you use the gt_three function to filter elements greater than 3 from list_1?
+gt_three(list_1)
 
 list_2 = [1, 2, 3, 1, 1, 1]
 # Question: What will be the output of gt_three(list_2)?
+print(gt_three(list_2)) # rong
+
 
 # Classes and Objects
 # Think of a class as a blueprint and objects as things created based on that blueprint
@@ -91,7 +105,8 @@ class DataExtractor:
         pass
 
 # Question: How do you create a DataExtractor object and print its some_value attribute?
-
+ob = DataExtractor(10)
+print(ob.some_value)
 # Libraries are code that can be reused.
 
 # Python comes with some standard libraries to do common operations, 
@@ -99,7 +114,8 @@ class DataExtractor:
 from datetime import datetime  # You can import library or your code from another file with the import statement
 
 # Question: How do you print the current date in the format 'YYYY MM DD'? Hint: Google strftime
-
+current_time = datetime.now().strftime("%Y-%M-%D")
+print(current_time)
 # Exception handling: When an error occurs, we need our code to gracefully handle it without just stopping. 
 # Here is how we can handle errors when the program is running
 try:
@@ -120,3 +136,11 @@ l = [1, 2, 3, 4, 5]
 
 # Question: How do you handle an IndexError when accessing an invalid index in a list?
 # NOTE: in the except block its preferred to specify the exact erro/exception that you want to handle
+index = 10
+try:
+  element = l[index]
+  print("element", element)
+except IndexError:
+  print(f"element at index {index} is out of range")
+finally:
+  print("excution complete")
